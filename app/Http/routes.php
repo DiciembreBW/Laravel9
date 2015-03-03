@@ -20,4 +20,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+get('articles','ArticlesController@index');
+
 
