@@ -21,5 +21,5 @@ Route::controllers([
 ]);
 
 get('articles','ArticlesController@index');
-
+get('articles/{id}','ArticlesController@show');
 

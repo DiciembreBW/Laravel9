@@ -1,16 +1,18 @@
-<html>
-       <head>
-       <meta charset="UTF-8">
-       <title>Document</title>
-       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-       </head>
+@extends('app')
 
-       <body>
-       <div class="container">
-            @yield('content')
-       </div>
+@section('content')
+    <h1>Articles</h1>
 
+<hr>
+    @foreach($articles as $articles)
 
-        @yield('footer')
-       </body>
-</html>
+           <article>
+
+                <a href="{{ url('articles',$articles->id) }}"> <h3>{{ $articles->title  }}</h3> </a>
+                <div class="body">
+                    {{ $articles->body }}
+                </div>
+           </article>
+
+    @endforeach()
+@stop
