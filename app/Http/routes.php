@@ -21,5 +21,11 @@ Route::controllers([
 ]);
 
 get('articles','ArticlesController@index');
+get('articles/create','ArticlesController@create');
 get('articles/{id}','ArticlesController@show');
+get('articles/{id}/edit','ArticlesController@edit');
+get('articles/{id}/delete','ArticlesController@delete');
+post('articles','ArticlesController@store');
+patch('articles/{id}','ArticlesController@update');
+
 
